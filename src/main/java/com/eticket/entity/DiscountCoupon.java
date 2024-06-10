@@ -1,9 +1,7 @@
-package com.eTicket.Entity;
+package com.eticket.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.UUID;
 
 @Entity
 @Table(name = "discount_coupon")

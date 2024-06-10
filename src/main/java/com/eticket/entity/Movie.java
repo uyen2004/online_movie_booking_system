@@ -1,11 +1,10 @@
-package com.eTicket.Entity;
+package com.eticket.entity;
 
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Set;
-import java.util.UUID;
 
 @Entity
 @Table(name = "movies")
@@ -14,7 +13,7 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Movies {
+public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
@@ -25,7 +24,7 @@ public class Movies {
     @Column
     private String language;
 
-    @Column
+    @Column(columnDefinition = "TEXT")
     private String overview;
 
     @Column
