@@ -1,11 +1,10 @@
-package com.eTicket.Entity;
+package com.eticket.entity;
 
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Set;
-import java.util.UUID;
 
 @Entity
 @Table(name = "cinema")

@@ -1,20 +1,19 @@
-package com.eTicket.Entity;
+package com.eticket.entity;
 
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Set;
-import java.util.UUID;
 
 @Entity
-@Table(name = "roles")
+@Table(name = "cities")
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
-public class Role {
+public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
@@ -22,6 +21,6 @@ public class Role {
     @Column
     private String name;
 
-    @OneToMany(mappedBy = "role")
-    private Set<Users> users;
+    @OneToMany(mappedBy = "city")
+    private Set<Cinema> cinema;
 }

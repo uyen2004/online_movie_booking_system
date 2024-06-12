@@ -1,11 +1,10 @@
-package com.eTicket.Entity;
+package com.eticket.entity;
 
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Set;
-import java.util.UUID;
 
 @Entity
 @Table(name = "`show`")
@@ -30,7 +29,7 @@ public class Show {
 
     @ManyToOne
     @JoinColumn(name = "movies_id", nullable = false)
-    private Movies movies;
+    private Movie movies;
 
     @OneToMany(mappedBy = "show")
     private Set<Booking> booking;
